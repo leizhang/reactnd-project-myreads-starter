@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ id, title, shelf, authors = [], imageLinks = {}, moveShelf }) =>
+const Book = ({
+  id,
+  title,
+  shelf,
+  authors = [],
+  imageLinks = {},
+  moveShelf,
+}) =>
   <div className="book">
     <div className="book-top">
       <div
