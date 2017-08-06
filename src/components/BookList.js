@@ -6,11 +6,7 @@ import Book from './Book';
 
 const BookList = ({ books, moveBook }) => {
   const callBook = book =>
-    <Book
-      key={book.id}
-      {...book}
-      moveShelf={shelf => moveBook(book, shelf)}
-    />;
+    <Book key={book.id} {...book} moveShelf={shelf => moveBook(book, shelf)} />;
   return (
     <div className="list-books">
       <div className="list-books-title">
