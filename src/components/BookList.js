@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import BookShelf from './BookShelf';
 import Book from './Book';
 
-const BookList = ({ books, onMoveBook }) => {
+const BookList = ({ books, moveBook }) => {
   const callBook = book =>
     <Book
       key={book.id}
       {...book}
-      moveShelf={shelf => onMoveBook(book, shelf)}
+      moveShelf={shelf => moveBook(book, shelf)}
     />;
   return (
     <div className="list-books">
@@ -38,7 +38,7 @@ const BookList = ({ books, onMoveBook }) => {
 
 BookList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
-  onMoveBook: PropTypes.func.isRequired,
+  moveBook: PropTypes.func.isRequired,
 };
 
 export default BookList;
