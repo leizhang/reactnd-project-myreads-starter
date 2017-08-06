@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash": "^4.17.4",
     "prettier": "^1.5.3",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
