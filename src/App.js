@@ -6,7 +6,6 @@ import './App.css';
 
 class BooksApp extends React.Component {
   state = {
-    //showSearchPage: true
     books: [],
   };
 
@@ -15,10 +14,10 @@ class BooksApp extends React.Component {
   }
 
   moveBook = (book, shelf) => {
-    BooksAPI.update(book, shelf).then((res) => {
+    BooksAPI.update(book, shelf).then(() => {
       book.shelf = shelf;
       this.setState({
-        books: this.state.books.filter((b) => book.id !== b.id).concat(book),
+        books: this.state.books.filter(b => book.id !== b.id).concat(book),
       });
     });
   };
@@ -30,7 +29,7 @@ class BooksApp extends React.Component {
           exact
           path="/"
           render={() =>
-            <BookList books={this.state.books} onMoveBook={this.moveBook} />}
+            <BookList books={this.state.books} moveBook={this.moveBook} />}
         />
       </div>
     );
