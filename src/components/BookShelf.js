@@ -9,7 +9,7 @@ const BookShelf = ({ title, children }) => {
       </h2>
       <div className="bookshelf-books">
         <ol className="books-grid">
-          {React.Children.map(children, (child, i) =>
+          {React.Children.map(children, child =>
             <li>
               {child}
             </li>
